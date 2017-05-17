@@ -1,4 +1,4 @@
-# twitter-markov-chain
+# redux-twittermarkovchain
 A Markov chain generator app using user tweets. Made with React, Redux, Express, Google Firebase, and the Twitter API. Used Firebase for user authentication and save/delete tweet functionality. Complete with Mocha/Chai unit tests and Selenium Webdriver end-to-end tests.
 
 ## Overview  
@@ -49,7 +49,7 @@ First, I created a Twitter Developers account and gathered the `consumer_key`, `
     - (Stop the server before running end-to-end tests)
 
 ## Methods and Functionality
-(in `client/src/App.js`)
+(in `client/src/containers/App.js`)
 
 #### *componentDidMount*   
 This lifecycle method retrieves 18 tweets from @openmessageio when the App container mounts. Tweets are retrieved from the Twitter API `GET statuses/user_timeline` passing in the Twitter handle and count.
