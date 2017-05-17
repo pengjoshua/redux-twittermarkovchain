@@ -76,7 +76,7 @@ Handles login and login button visibility and makes an API call to `POST /login`
 Click handlers for signup/login button visibility.
 
 #### *saveFavorite*  
-Makes an API call to `POST /favorites` to save a generated tweet. Passes in uid (user id associated with the generated tweet), handle (i.e. @openmessageio), username (Brandless), text, and created_at timestamp.
+Makes an API call to `POST /favorites` to save a generated tweet. Passes in uid (user id associated with the generated tweet), handle (i.e. @openmessageio), username (Open Message), text, and created_at timestamp.
 
 #### *getFavorites*  
 Makes an API call to `GET /favorites` to retrieve all tweets. The tweets are later filtered according to the user that they are assigned to using the tweet uid (in Tweets and Favorites child components).  
