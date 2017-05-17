@@ -60,10 +60,7 @@ I chose not to incorporate Redux for state management because I have only have 1
 (in `client/src/App.js`)
 
 #### *componentDidMount*   
-This lifecycle method retrieves 18 tweets from @brandlesslife when the APP component mounts.
-
-#### *getTweets*   
-Get Tweets from the Twitter API `GET statuses/user_timeline` passing in the Twitter handle and count.
+This lifecycle method retrieves 18 tweets from @brandlesslife when the App container mounts. Tweets are retrieved from the Twitter API `GET statuses/user_timeline` passing in the Twitter handle and count.
 
 #### *choice*   
 Returns a random array index.
@@ -74,7 +71,7 @@ Makes the Markov chain (tweet) with a recursive call.
 #### *displayTweet*   
 Display the generated tweet.  
 
-#### *handleSubmit*    
+#### *handleGenerateSubmit*    
 Handles the 'generate' button submit and retrieves tweets from the Twitter API `GET statuses/user_timeline` passing in the Twitter handle and count.  
 
 #### *handleSignupSubmit*  
@@ -83,23 +80,23 @@ Handles signup and signup button visibility and makes an API call to `POST /sign
 #### *handleLoginSubmit*  
 Handles login and login button visibility and makes an API call to `POST /login` passing in the email and password.
 
-#### *clickSignup, clickLogin, clickLogout*  
+#### *clickSignupButton, clickLoginButton, clickLogoutButton*  
 Click handlers for signup/login button visibility.
 
-#### *saveTweet*  
+#### *saveFavorite*  
 Makes an API call to `POST /favorites` to save a generated tweet. Passes in uid (user id associated with the generated tweet), handle (i.e. @brandlesslife), username (Brandless), text, and created_at timestamp.
 
 #### *getFavorites*  
 Makes an API call to `GET /favorites` to retrieve all tweets. The tweets are later filtered according to the user that they are assigned to using the tweet uid (in Tweets and Favorites child components).  
 
-#### *handleFavoritesClick*  
+#### *deleteFavorite*  
 Handling a favorite tweet delete button click and makes an API call to `DELETE /favorites` passing the tweet id.
 
 #### *render*  
 The top right userInfo section will be 1 of 3 possibilities:  
 1. login form  
 2. signup form  
-3. 'You are logged in' notification  
+3. 'You are logged in as ...' notification  
 
 The rest is Bootstrap grid formatting with the Tweets and Favorites child components handling the display of fetched and saved tweets, respectively.
 
