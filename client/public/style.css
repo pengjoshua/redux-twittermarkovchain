@@ -1,77 +1,59 @@
 html {
   position: relative;
-  min-height: 100%;
-}
+  min-height: 100%; }
 
 body {
   margin-bottom: 30px;
   padding: 0;
-  font-family: sans-serif;
-}
+  font-family: sans-serif; }
 
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: #f5f5f5;
-}
+  background-color: #f5f5f5; }
 
 .container .text-muted {
-  margin: 10px 0;
-}
+  margin: 10px 0; }
 
 .tweetInfo, .userInfo {
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
 
 .title, .tweet {
-  color: #8b008b;
-}
+  color: #8b008b; }
 
 .subtitle {
-  color: #8000ff;
-}
+  color: #8000ff; }
 
 .bottom {
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
 
 .user {
- color: #8000ff;
-}
+  color: #8000ff; }
 
 .favoritestitle {
-  color: #f4425f;
-}
+  color: #f4425f; }
 
 .favoritestime {
-  color: #f4425f;
-}
+  color: #f4425f; }
 
 .favoritestext {
-  color: #f4425f;
-}
+  color: #f4425f; }
 
 .generatedtitle {
-  color: #6242f4;
-}
+  color: #6242f4; }
 
 .generatedtime {
-  color: #6242f4;
-}
+  color: #6242f4; }
 
 .generatedtext {
-  color: #6242f4;
-}
+  color: #6242f4; }
 
 .fetchedtitle {
-  color: #777;
-}
+  color: #777; }
 
 .fetchedtime {
-  color: #777;
-}
+  color: #777; }
 
 .fetchedtext {
-  color: #777;
-}
+  color: #777; }

@@ -1,0 +1,83 @@
+$magenta: #8b008b;
+$purple: #8000ff;
+$pink: #f4425f;
+$bluepurple: #6242f4;
+$gray: #777;
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 30px;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+.container .text-muted {
+  margin: 10px 0;
+}
+
+.tweetInfo, .userInfo {
+  margin-bottom: 20px;
+}
+
+.title, .tweet {
+  color: $magenta;
+}
+
+.subtitle {
+  color: $purple;
+}
+
+.bottom {
+  margin-bottom: 20px;
+}
+
+.user {
+ color: $purple;
+}
+
+.favoritestitle {
+  color: $pink;
+}
+
+.favoritestime {
+  color: $pink;
+}
+
+.favoritestext {
+  color: $pink;
+}
+
+.generatedtitle {
+  color: $bluepurple;
+}
+
+.generatedtime {
+  color: $bluepurple;
+}
+
+.generatedtext {
+  color: $bluepurple;
+}
+
+.fetchedtitle {
+  color: $gray;
+}
+
+.fetchedtime {
+  color: $gray;
+}
+
+.fetchedtext {
+  color: $gray;
+}
