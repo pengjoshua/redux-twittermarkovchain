@@ -1,15 +1,9 @@
 # twitter-markov-chain
 A Markov chain generator app using user tweets. Made with React, Redux, Express, Google Firebase, and the Twitter API. Used Firebase for user authentication and save/delete tweet functionality. Complete with Mocha/Chai unit tests and Selenium Webdriver end-to-end tests.
 
-## Challenge  
-
-We’d like you to build a Markov chain generator (https://en.wikipedia.org/wiki/Markov_chain). You can use any tools you wish, including any libraries or languages.  
-
-Our only restriction is that the chain must be generated based on the tweets of any Twitter user. As a stretch goal we’d also like the ability to enter any Twitter username and see a generated Markov chain.
-
 ## Overview  
 
-For this project, I used a mathematical structure called a Markov chain to model the statistical likelihood of a word in a tweet being followed by some other word in a tweet. I use this statistical information to generate new custom tweets by choosing the first word (at random) and then choosing subsequent words with a frequency proportional to how those words are arranged in the original text. This process will give me a string of text that may not be in the original text, but will share stylistic properties of the original text.
+For this project, I used a mathematical structure called a Markov chain (https://en.wikipedia.org/wiki/Markov_chain) to model the statistical likelihood of a word in a tweet being followed by some other word in a tweet. I use this statistical information to generate new custom tweets by choosing the first word (at random) and then choosing subsequent words with a frequency proportional to how those words are arranged in the original text. This process will give me a string of text that may not be in the original text, but will share stylistic properties of the original text.
 
 You can now log in and can save your favorite generated Markov chains (tweets) to a Google Firebase database. Since tweets are linked to a user's uid, each user can save, retrieve, and delete their own generated tweets. Firebase assigns a key which I have assigned to each tweet's id so that each tweet can be individually deleted from the database.
 
@@ -58,7 +52,7 @@ First, I created a Twitter Developers account and gathered the `consumer_key`, `
 (in `client/src/App.js`)
 
 #### *componentDidMount*   
-This lifecycle method retrieves 18 tweets from @brandlesslife when the App container mounts. Tweets are retrieved from the Twitter API `GET statuses/user_timeline` passing in the Twitter handle and count.
+This lifecycle method retrieves 18 tweets from @openmessageio when the App container mounts. Tweets are retrieved from the Twitter API `GET statuses/user_timeline` passing in the Twitter handle and count.
 
 #### *choice*   
 Returns a random array index.
@@ -82,7 +76,7 @@ Handles login and login button visibility and makes an API call to `POST /login`
 Click handlers for signup/login button visibility.
 
 #### *saveFavorite*  
-Makes an API call to `POST /favorites` to save a generated tweet. Passes in uid (user id associated with the generated tweet), handle (i.e. @brandlesslife), username (Brandless), text, and created_at timestamp.
+Makes an API call to `POST /favorites` to save a generated tweet. Passes in uid (user id associated with the generated tweet), handle (i.e. @openmessageio), username (Brandless), text, and created_at timestamp.
 
 #### *getFavorites*  
 Makes an API call to `GET /favorites` to retrieve all tweets. The tweets are later filtered according to the user that they are assigned to using the tweet uid (in Tweets and Favorites child components).  

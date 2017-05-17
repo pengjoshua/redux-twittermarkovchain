@@ -43,9 +43,9 @@ class App extends Component {
     this.wordStats = {};
   }
 
-  // get 18 tweets from @brandlesslife to start
+  // get 18 tweets from @openmessageio to start
   componentDidMount() {
-    this.props.dispatch(fetchTweets('brandlesslife', startCount));
+    this.props.dispatch(fetchTweets('openmessageio', startCount));
   }
 
   // Handling the 'generate' button submit
@@ -118,7 +118,7 @@ class App extends Component {
 
   // API call to POST /favorites to save a generated tweet
   // Passes in uid (user id associated with the generated tweet),
-  // handle (i.e. @brandlesslife), username (Brandless), text, and created_at timestamp
+  // handle (i.e. @openmessageio), username (Open Message), text, and created_at timestamp
   saveFavorite() {
     let uid = this.props.user.user.uid;
     let handle = this.props.tweets.saveTweet.handle;
@@ -249,7 +249,7 @@ class App extends Component {
                       className="form-control handle-generate"
                       type="text"
                       ref="handle"
-                      placeholder="Enter Twitter handle (i.e. brandlesslife)"
+                      placeholder="Enter Twitter handle (i.e. openmessageio)"
                     />
                   </FormGroup>
                   <FormGroup>

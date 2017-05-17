@@ -264,7 +264,7 @@ describe('Twitter Markov Chain API', () => {
     });
   });
 
-  describe('POST /save - save one generated tweet', () => {
+  describe('POST /favorites - save one generated tweet', () => {
     it('should successfully save a tweet', (done) => {
       const tweet = {
         handle: 'hello',
@@ -274,7 +274,7 @@ describe('Twitter Markov Chain API', () => {
         created_at: new Date()
       };
       chai.request(app)
-      .post('/save')
+      .post('/favorites')
       .send({ handle: tweet.handle, uid: tweet.uid, username: tweet.username, text: tweet.text, created_at: tweet.created_at })
       .end((err, res) => {
         res.should.have.status(200);
@@ -299,7 +299,6 @@ describe('Twitter Markov Chain API', () => {
         .end((err, res) => {
           res.should.have.status(200);
           expect(Array.isArray(res.body)).to.equal(true);
-          expect(res.body.length).to.equal(3);
           done();
         });
       });
@@ -316,11 +315,11 @@ describe('Twitter Markov Chain API', () => {
         created_at: new Date()
       };
       chai.request(app)
-      .post('/save')
+      .post('/favorites')
       .send({ handle: tweet.handle, uid: tweet.uid, username: tweet.username, text: tweet.text, created_at: tweet.created_at })
       .end((err, res) => {
         chai.request(app)
-        .delete('/delete/' + res.body.id)
+        .delete('/favorites/' + res.body.id)
         .end((err, res) => {
           res.should.have.status(200);
           expect(res.body.msg).to.equal('success');
