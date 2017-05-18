@@ -38,9 +38,6 @@ const startCount = 18;
 class App extends Component {
   constructor(props) {
     super(props);
-    this.terminals = {};
-    this.startWords = [];
-    this.wordStats = {};
   }
 
   // get 18 tweets from @openmessageio to start
